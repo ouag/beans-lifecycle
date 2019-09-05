@@ -1,5 +1,6 @@
 package com.ouag.sample.beanslifecycle.config;
 
+import com.ouag.sample.beanslifecycle.ISampleBeans;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 
@@ -14,7 +15,7 @@ public class StrategyBean {
 
     public StrategyBean(ApplicationContext context){
         this.context = context;
-        beansSet.addAll(context.getBeansOfType(Object.class).values());
+        beansSet.addAll(context.getBeansOfType(ISampleBeans.class).values());
     }
 
 
